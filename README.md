@@ -22,32 +22,34 @@
   <sub>Now — v4.1.5 shipped · the microkernel OS is still a spike · ARM Cortex-A9 backend for the VEX V5 Brain</sub>
 </p>
 
+<div align="center">
 <table>
   <tr>
-    <th>01 / COMPILER</th>
-    <th>02 / IDE</th>
-    <th>03 / OS</th>
-    <th>04 / VEX</th>
+    <th width="200">01 / COMPILER</th>
+    <th width="200">02 / IDE</th>
+    <th width="200">03 / OS</th>
+    <th width="200">04 / VEX</th>
   </tr>
   <tr>
-    <td align="center" width="25%">
+    <td align="center" width="200">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler"><strong>JHYY Compiler</strong></a><br><br>
       <sub>A self-hosted systems language with a hand-written amd64 backend — no LLVM, no QBE, no GC.</sub>
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="200">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-IDE"><strong>JHYY IDE</strong></a><br><br>
       <sub>Drag-block programming and full text editing over one shared AST, with Claude Code built in.</sub>
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="200">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-OS"><strong>JiHuiYiYou-OS</strong></a><br><br>
       <sub>A co-designed microkernel OS — amd64, UEFI, capability-based, written in JHYY.</sub>
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="200">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-for-VEX"><strong>JiHuiYiYou-for-VEX</strong></a><br><br>
       <sub>JHYY compiled to the VEX V5 Brain (ARM Cortex-A9) — signed binary format, softfp ABI, struct layouts.</sub>
     </td>
   </tr>
 </table>
+</div>
 
 <p align="center">
   <picture>

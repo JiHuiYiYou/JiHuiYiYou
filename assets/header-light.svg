@@ -22,28 +22,31 @@
       <stop offset="100%" stop-color="#eef2f1"/>
     </linearGradient>
 
-    <!-- ===== badge (frosted card, 128-unit local space) ===== -->
+    <!-- ===== badge (the brand's own dark glass card, 128-unit local space) =====
+         Deliberately identical to header-dark.svg: the JHYY badge is a dark
+         tile in every context, so it does not get washed out to white just
+         because the page behind it is light. -->
     <linearGradient id="badgeBg" x1="0" y1="0" x2="0" y2="128" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#e9f0ef"/>
+      <stop offset="0%" stop-color="#252545"/>
+      <stop offset="100%" stop-color="#0a0a18"/>
     </linearGradient>
     <linearGradient id="badgeShine" x1="0" y1="0" x2="0" y2="128" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.20"/>
       <stop offset="34%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="jGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00a886"/>
-      <stop offset="100%" stop-color="#007a66"/>
+      <stop offset="0%" stop-color="#00ffd0"/>
+      <stop offset="100%" stop-color="#00a080"/>
     </linearGradient>
     <linearGradient id="jShine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.40"/>
       <stop offset="32%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
     <!-- ===== soft teal glows ===== -->
     <radialGradient id="glowBadge" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#00d4aa" stop-opacity="0.22"/>
-      <stop offset="55%" stop-color="#00d4aa" stop-opacity="0.06"/>
+      <stop offset="0%" stop-color="#00d4aa" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#00d4aa" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#00d4aa" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowTerm" cx="0.5" cy="0.5" r="0.5">
@@ -77,9 +80,9 @@
              depends on a font being installed on the rendering host -->
         <path d="M762 569Q762 281 628.5 128.0Q495 -25 242 -25Q129 -25 33 14V317Q116 254 219 254Q440 254 440 582V1434H762Z" transform="translate(46.1875 88) scale(0.0390625 -0.0390625)" fill="url(#jGrad)"/>
         <path d="M762 569Q762 281 628.5 128.0Q495 -25 242 -25Q129 -25 33 14V317Q116 254 219 254Q440 254 440 582V1434H762Z" transform="translate(46.1875 88) scale(0.0390625 -0.0390625)" fill="url(#jShine)"/>
-        <rect x="32" y="96" width="64" height="4" rx="2" fill="#00a886" fill-opacity="0.75"/>
+        <rect x="32" y="96" width="64" height="4" rx="2" fill="#00d4aa" fill-opacity="0.65"/>
       </g>
-      <rect x="0.6" y="0.6" width="126.8" height="126.8" rx="15.4" fill="none" stroke="#0a0a0a" stroke-opacity="0.12" stroke-width="1.2"/>
+      <rect x="0.6" y="0.6" width="126.8" height="126.8" rx="15.4" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.2"/>
     </g>
 
     <!-- ===== identity column ===== -->
