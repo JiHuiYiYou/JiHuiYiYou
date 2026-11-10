@@ -26,6 +26,7 @@ jobs:
     steps:
       - name: Check out profile
         uses: actions/checkout@v7
+
       - name: Generate summary cards
         uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
@@ -35,5 +36,33 @@ jobs:
           NAME: JiHuiYiYou
           TIME_ZONE: Asia/Shanghai
           BRANCH_NAME: main
-          AUTO_PUSH: true
+          # 上游 action 每次运行开头都会 rm -rf 整个输出目录、再生成全部 65 个主题，
+          # 自己 push ⇒ 每次把 60+ 个 README 用不上的主题提交进仓。
+          # 改成「只生成 → 裁剪 → 我们自己提交」。
+          AUTO_PUSH: false
           EXCLUDE_REPOS: pldb
+
+      - name: Keep only the themes this README uses
+        run: |
+          cd profile-summary-card-output
+          for theme in */; do
+            case "${theme%/}" in
+              github|github_dark) ;;
+              *) rm -rf -- "$theme" ;;
+            esac
+          done
+          # 上游生成的「全部主题预览索引」—— 列的是刚被裁掉的 63 个主题，README 用不到
+          rm -f README.md
+          ls -1
+
+      - name: Commit cards
+        run: |
+          git config user.name  "profile-summary-cards[bot]"
+          git config user.email "profile-summary-cards-bot@example.com"
+          git add -A profile-summary-card-output
+          if git diff --cached --quiet; then
+            echo "cards unchanged"
+          else
+            git commit -m "Generate profile summary cards"
+            git push
+          fi
