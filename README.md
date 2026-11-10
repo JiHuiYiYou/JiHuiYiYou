@@ -34,7 +34,7 @@ Small and personal; the language is just the loudest one.
 
 ---
 
-**Not only me.** Robotics is a team sport; the rest of this account was built next
+**Friends around me.** Robotics is a team sport; the rest of this account was built next
 to people I know from school:
 
 - [@billwang123123](https://github.com/billwang123123) — roommate, classmate, FRC
