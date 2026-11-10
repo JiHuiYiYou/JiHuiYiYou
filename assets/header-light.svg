@@ -11,8 +11,8 @@
     - the badge becomes a frosted light tile; its trace becomes a dark hairline
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="248" viewBox="0 0 960 248" role="img" aria-labelledby="jhTitle jhDesc">
-  <title id="jhTitle">JiHuiYiYou — JHYY, a self-hosted systems language</title>
-  <desc id="jhDesc">Light banner. On the left, a frosted J badge beside the eyebrow HELLO, I&#8217;M, the wordmark JiHuiYiYou, the line JHYY — a self-hosted, statically typed systems language, and chips for JHYY, Python, TypeScript and C#. On the right, a terminal window showing the self-hosting closure: the compiler compiles its own source twice and the two assembly outputs come out byte-identical.</desc>
+  <title id="jhTitle">JiHuiYiYou — I designed JHYY, a self-hosted systems language</title>
+  <desc id="jhDesc">Light banner. On the left, a frosted J badge beside the eyebrow HELLO, I&#8217;M, the wordmark JiHuiYiYou, the line I designed JHYY — a self-hosted systems language, and chips for JHYY, Python, TypeScript and C#. On the right, a terminal window showing the self-hosting closure: the compiler compiles its own source twice and the two assembly outputs come out byte-identical.</desc>
 
   <defs>
     <!-- ===== surface ===== -->
@@ -88,7 +88,7 @@
     <!-- ===== identity column ===== -->
     <text x="136" y="62" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="11" letter-spacing="2.4" fill="#007a66">HELLO, I&#8217;M</text>
     <text x="136" y="116" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.4" fill="#0a0a0a">JiHuiYiYou</text>
-    <text x="136" y="145" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4c5155">JHYY — a self-hosted, statically typed systems language</text>
+    <text x="136" y="145" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4c5155">I designed JHYY — a self-hosted systems language</text>
 
     <!-- ===== stack chips ===== -->
     <g font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="12" text-anchor="middle">

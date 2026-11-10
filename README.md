@@ -2,15 +2,14 @@
   <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
-      <img src="./assets/header-light.svg" alt="机会翼游 JHYY — a self-hosted systems language" width="100%">
+      <img src="./assets/header-light.svg" alt="JiHuiYiYou — I designed JHYY, a self-hosted systems language" width="100%">
     </picture>
   </a>
 </h1>
 
 <p align="center">
-  <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
-    <img src="./assets/cta-card.svg" alt="机会翼游 JHYY — A systems language that compiles itself. Click to visit the official site." width="100%">
-  </a>
+  I'm <strong>JiHuiYiYou</strong> (机会翼游). <strong>JHYY</strong> is the language I designed —
+  a self-hosted, statically typed systems language whose compiler is written in itself.
 </p>
 
 <p align="center">
@@ -45,6 +44,12 @@
     </picture>
   </p>
 </details>
+
+<p align="center">
+  <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
+    <img src="./assets/cta-card.svg" alt="机会翼游 JHYY — A systems language that compiles itself. Click to visit the official site." width="100%">
+  </a>
+</p>
 
 <p align="center">
   <sub>
