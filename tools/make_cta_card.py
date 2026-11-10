@@ -31,6 +31,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import sys
 from pathlib import Path
 
@@ -41,6 +42,7 @@ from fontTools.ttLib import TTFont
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "cta-card.svg"
+CALLIGRAPHY = ROOT / "assets" / "jhyy-calligraphy.png"
 DEFAULT_FONT_DIR = ROOT.parent / "JiHuiYiYou-website" / "assets" / "fonts"
 
 # ── 官网的令牌（JiHuiYiYou-website/assets/css/main.css） ──────────────────
@@ -345,11 +347,41 @@ rx="{CLONE_H / 2}" fill="{BG_DEEP}" stroke="{HAIRLINE_2}" stroke-width="1.5"/>
 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">{icon}</g>"""
 
 
+def embed_calligraphy(target_w: int) -> str:
+    """把书法印记内嵌成 data URI。
+
+    SVG 引外部图片会被浏览器掐掉（SVG-as-image 是 secure static mode）⇒ 必须内嵌。
+    原图 600px 宽有 122 KB，内嵌后整张卡要 200 KB 出头 ⇒ 先缩到实际显示宽度的
+    2 倍（视网膜够用，体积掉一个数量级）。没有 PIL 就退回原图。
+    """
+    raw = CALLIGRAPHY.read_bytes()
+    try:
+        import io
+
+        from PIL import Image
+
+        im = Image.open(io.BytesIO(raw)).convert("RGBA")
+        h = round(target_w * im.height / im.width)
+        im = im.resize((target_w, h), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, format="PNG", optimize=True)
+        raw = buf.getvalue()
+    except ImportError:
+        pass
+    return base64.b64encode(raw).decode("ascii")
+
+
 def build(font_dir: Path) -> str:
     serif = Font(font_dir / "instrument-serif-400-normal-latin.woff2")
     serif_i = Font(font_dir / "instrument-serif-400-italic-latin.woff2")
     sans = Font(font_dir / "space-grotesk-400-normal-latin.woff2")
     mono = Font(font_dir / "jetbrains-mono-400-normal-latin.woff2")
+
+    # 书法印记：放在标题上方那块空出来的 top padding 里（官网那张卡这块是空的，
+    # 标题的墨迹从 y=112 才开始 ⇒ 塞得下，且**不动其它任何元素的位置**）
+    call_h = 54
+    call_w = call_h * 600 / 334
+    call_png = embed_calligraphy(round(call_w * 2))
 
     t1, _ = draw(serif, TITLE_1, TITLE_SIZE, W / 2, TITLE1_Y, TEXT_1,
                  tracking=TITLE_TRACK, anchor="middle")
@@ -372,6 +404,7 @@ aria-label="机会翼游 JHYY — {TITLE_1} {TITLE_2}. Click to visit the offici
     <rect x="0" y="0" width="{W}" height="{H}" fill="{BG_ELEV_1}"/>
     <rect x="0" y="0" width="{W}" height="{H}" fill="url(#glowA)"/>
     <rect x="0" y="0" width="{W}" height="{H}" fill="url(#glowB)"/>
+    <image x="{(W - call_w) / 2:.2f}" y="22" width="{call_w:.2f}" height="{call_h}" href="data:image/png;base64,{call_png}"/>
     {t1}
     {t2}
 {sub}
