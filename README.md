@@ -1,55 +1,26 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
-    <img src="./assets/header-light.svg" alt="JiHuiYiYou — JHYY, a self-hosted systems language" width="100%">
-  </picture>
-</p>
+<h1 align="center">
+  <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
+      <img src="./assets/header-light.svg" alt="机会翼游 JHYY — a self-hosted systems language" width="100%">
+    </picture>
+  </a>
+</h1>
 
-<p align="center">
-  <img src="./assets/jhyy-calligraphy.png" height="58" alt="机会翼游">
-</p>
-
-<p align="center">
-  <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler"><strong>JHYY Compiler ↗</strong></a><br>
-  <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler/releases/latest"><img src="https://img.shields.io/github/v/release/JiHuiYiYou/JiHuiYiYou-compiler?style=flat&amp;label=release&amp;color=00d4aa" alt="Latest JHYY release"></a>
-  <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler/actions/workflows/ci.yml/badge.svg?branch=main" alt="JHYY CI status"></a>
-  <img src="https://img.shields.io/badge/self--host-byte--equal-00d4aa?style=flat" alt="self-hosting is byte-equal">
-  <img src="https://img.shields.io/github/license/JiHuiYiYou/JiHuiYiYou-compiler?style=flat&amp;color=00d4aa" alt="License"><br>
-  <sub>A self-hosted, statically typed systems language — the compiler is written in itself and reproduces itself byte-for-byte · <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">Website</a></sub>
-</p>
-
-<p align="center">
-  <sub>Now — v4.1.5 shipped · the microkernel OS is still a spike · ARM Cortex-A9 backend for the VEX V5 Brain</sub>
-</p>
-
-<div align="center">
 <table>
   <tr>
-    <th width="25%">01 / COMPILER</th>
-    <th width="25%">02 / IDE</th>
-    <th width="25%">03 / OS</th>
-    <th width="25%">04 / VEX</th>
-  </tr>
-  <tr>
-    <td align="center" width="25%">
-      <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler"><strong>JHYY Compiler</strong></a><br><br>
-      <sub>A self-hosted systems language with a hand-written amd64 backend — no LLVM, no QBE, no GC.</sub>
+    <td>
+      <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
+        <img src="./assets/jhyy-calligraphy.png" width="220" alt="机会翼游">
+      </a>
     </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-IDE"><strong>JHYY IDE</strong></a><br><br>
-      <sub>Drag-block programming and full text editing over one shared AST, with Claude Code built in.</sub>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-OS"><strong>JiHuiYiYou-OS</strong></a><br><br>
-      <sub>A co-designed microkernel OS — amd64, UEFI, capability-based, written in JHYY.</sub>
-    </td>
-    <td align="center" width="25%">
-      <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-for-VEX"><strong>JiHuiYiYou-for-VEX</strong></a><br><br>
-      <sub>JHYY compiled to the VEX V5 Brain (ARM Cortex-A9) — signed binary format, softfp ABI, struct layouts.</sub>
+    <td>
+      <strong>A systems language that compiles itself.</strong><br><br>
+      JHYY (机会翼游) is statically typed and expression-oriented. The compiler is written in itself — <code>compiler/src0/*.jhyy</code> is the only implementation — and the backend is a hand-written amd64 emitter: no LLVM, no QBE, no garbage collector. One language, four projects: compiler, IDE, microkernel OS, and an ARM Cortex-A9 backend for the VEX V5 Brain.<br><br>
+      <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">机会翼游 · 官网 ↗</a>
     </td>
   </tr>
 </table>
-</div>
 
 <p align="center">
   <picture>
