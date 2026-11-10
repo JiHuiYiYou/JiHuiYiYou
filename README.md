@@ -9,7 +9,7 @@
 
 <table>
   <tr>
-    <td>
+    <td width="240" valign="middle">
       <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
         <img src="./assets/jhyy-calligraphy.png" width="220" alt="机会翼游">
       </a>
