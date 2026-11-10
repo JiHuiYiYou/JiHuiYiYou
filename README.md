@@ -7,20 +7,11 @@
   </a>
 </h1>
 
-<table>
-  <tr>
-    <td width="240" valign="middle">
-      <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
-        <img src="./assets/jhyy-calligraphy.png" width="220" alt="机会翼游">
-      </a>
-    </td>
-    <td>
-      <strong>A systems language that compiles itself.</strong><br><br>
-      JHYY (机会翼游) is statically typed and expression-oriented. The compiler is written in itself — <code>compiler/src0/*.jhyy</code> is the only implementation — and the backend is a hand-written amd64 emitter: no LLVM, no QBE, no garbage collector. One language, four projects: compiler, IDE, microkernel OS, and an ARM Cortex-A9 backend for the VEX V5 Brain.<br><br>
-      <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">机会翼游 · 官网 ↗</a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
+    <img src="./assets/cta-card.svg" alt="机会翼游 JHYY — A systems language that compiles itself. Click to visit the official site." width="800">
+  </a>
+</p>
 
 <p align="center">
   <picture>
