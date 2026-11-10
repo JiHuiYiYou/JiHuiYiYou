@@ -34,13 +34,14 @@ Small and personal; the language is just the loudest one.
 
 ---
 
-**Not only me.** Robotics is a team sport, and the rest of this account was built
-next to classmates and teammates:
+**Not only me.** Robotics is a team sport; the rest of this account was built next
+to people I know from school:
 
-- @billwang123123 — roommate, classmate, FRC teammate
-- @nyt-nyt2012 — VRC teammate, same school
-- @h0p3-cser — classmate
-- @LC658-code — classmate, VRC teammate
+- [@billwang123123](https://github.com/billwang123123) — roommate, classmate, FRC
+- [@nyt-nyt2012](https://github.com/nyt-nyt2012) — VRC, same school
+- [@h0p3-cser](https://github.com/h0p3-cser) — classmate
+- [@LC658-code](https://github.com/LC658-code) — classmate, VRC
+
 
 ---
 
