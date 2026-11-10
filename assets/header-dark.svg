@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  assets/header-dark.svg — JiHuiYiYou / JHYY profile banner (dark variant)
+
+  Canvas 960 x 248. Geometry is identical to assets/header-light.svg;
+  ONLY colour literals differ.
+
+  Self-contained by construction:
+    - no <image> and no external href (SVG served through <img> forbids them)
+    - no @font-face (system fonts only)
+    - no <script>, no <foreignObject>
+    - the "J" badge glyph and the terminal checkmark are <path>s, never font glyphs
+    - no <style> block — only presentation attributes and inheritance
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="248" viewBox="0 0 960 248" role="img" aria-labelledby="jhTitle jhDesc">
+  <title id="jhTitle">JiHuiYiYou — JHYY, a self-hosted systems language</title>
+  <desc id="jhDesc">Dark banner. On the left, a glass-card J badge beside the eyebrow HELLO, I&#8217;M, the wordmark JiHuiYiYou, the line JHYY — a self-hosted, statically typed systems language, and chips for JHYY, Python, TypeScript and C#. On the right, a terminal window showing the self-hosting closure: the compiler compiles its own source twice and the two assembly outputs come out byte-identical.</desc>
+
+  <defs>
+    <!-- ===== surface ===== -->
+    <linearGradient id="surface" x1="0" y1="0" x2="960" y2="248" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111418"/>
+      <stop offset="52%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#0d1413"/>
+    </linearGradient>
+
+    <!-- ===== badge (brand glass card, 128-unit local space) ===== -->
+    <linearGradient id="badgeBg" x1="0" y1="0" x2="0" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#252545"/>
+      <stop offset="100%" stop-color="#0a0a18"/>
+    </linearGradient>
+    <linearGradient id="badgeShine" x1="0" y1="0" x2="0" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="34%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="jGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffd0"/>
+      <stop offset="100%" stop-color="#00a080"/>
+    </linearGradient>
+    <linearGradient id="jShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.40"/>
+      <stop offset="32%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ===== soft teal glows ===== -->
+    <radialGradient id="glowBadge" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#00d4aa" stop-opacity="0.26"/>
+      <stop offset="55%" stop-color="#00d4aa" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTerm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#00d4aa" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ===== grid texture ===== -->
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 H 0 V 32" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+
+    <!-- ===== clips ===== -->
+    <clipPath id="frame"><rect x="0" y="0" width="960" height="248" rx="20"/></clipPath>
+    <clipPath id="badgeClip"><rect x="0" y="0" width="128" height="128" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <!-- ===== background ===== -->
+    <rect x="0" y="0" width="960" height="248" fill="url(#surface)"/>
+    <ellipse cx="76" cy="72" rx="200" ry="150" fill="url(#glowBadge)"/>
+    <ellipse cx="752" cy="124" rx="250" ry="175" fill="url(#glowTerm)"/>
+    <rect x="0" y="0" width="960" height="248" fill="url(#grid)"/>
+
+    <!-- ===== glass-card "J" badge (84 x 84 on screen) ===== -->
+    <g transform="translate(32 44) scale(0.65625)">
+      <g clip-path="url(#badgeClip)">
+        <rect x="0" y="0" width="128" height="128" rx="16" fill="url(#badgeBg)"/>
+        <rect x="0" y="0" width="128" height="128" rx="16" fill="url(#badgeShine)"/>
+        <!-- the J: the Segoe UI Bold glyph, traced to a path so the badge never
+             depends on a font being installed on the rendering host -->
+        <path d="M762 569Q762 281 628.5 128.0Q495 -25 242 -25Q129 -25 33 14V317Q116 254 219 254Q440 254 440 582V1434H762Z" transform="translate(46.1875 88) scale(0.0390625 -0.0390625)" fill="url(#jGrad)"/>
+        <path d="M762 569Q762 281 628.5 128.0Q495 -25 242 -25Q129 -25 33 14V317Q116 254 219 254Q440 254 440 582V1434H762Z" transform="translate(46.1875 88) scale(0.0390625 -0.0390625)" fill="url(#jShine)"/>
+        <rect x="32" y="96" width="64" height="4" rx="2" fill="#00d4aa" fill-opacity="0.65"/>
+      </g>
+      <rect x="0.6" y="0.6" width="126.8" height="126.8" rx="15.4" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.2"/>
+    </g>
+
+    <!-- ===== identity column ===== -->
+    <text x="136" y="62" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="11" letter-spacing="2.4" fill="#00d4aa">HELLO, I&#8217;M</text>
+    <text x="136" y="116" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.4" fill="#fafafa">JiHuiYiYou</text>
+    <text x="136" y="145" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" fill="#b4b4ba">JHYY — a self-hosted, statically typed systems language</text>
+
+    <!-- ===== stack chips ===== -->
+    <g font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="12" text-anchor="middle">
+      <rect x="136" y="164" width="58" height="26" rx="13" fill="#00d4aa" fill-opacity="0.10" stroke="#00d4aa" stroke-opacity="0.40" stroke-width="1"/>
+      <text x="165" y="181" fill="#00d4aa">JHYY</text>
+      <rect x="204" y="164" width="72" height="26" rx="13" fill="#131316" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+      <text x="240" y="181" fill="#b4b4ba">Python</text>
+      <rect x="286" y="164" width="102" height="26" rx="13" fill="#131316" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+      <text x="337" y="181" fill="#b4b4ba">TypeScript</text>
+      <rect x="398" y="164" width="44" height="26" rx="13" fill="#131316" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+      <text x="420" y="181" fill="#b4b4ba">C#</text>
+    </g>
+
+    <!-- ===== divider ===== -->
+    <path d="M524 46V202" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- ===== terminal illustration: the self-hosting closure ===== -->
+    <g>
+      <rect x="560" y="30" width="368" height="188" rx="18" fill="#131316" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+      <path d="M560 66H928" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+      <circle cx="582" cy="48" r="4.5" fill="#3b4248"/>
+      <circle cx="597" cy="48" r="4.5" fill="#3b4248"/>
+      <circle cx="612" cy="48" r="4.5" fill="#00d4aa"/>
+      <text x="628" y="52" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="11" fill="#75757d">jhyy · self-host closure</text>
+
+      <g font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="11">
+        <text x="576" y="96" fill="#00d4aa">$</text>
+        <text x="592" y="96" fill="#fafafa">jhyy compile src0/main.jhyy --no-link -o v2</text>
+        <text x="576" y="114" fill="#00d4aa">$</text>
+        <text x="592" y="114" fill="#fafafa">jhyy_v2 compile src0/main.jhyy --no-link -o v3</text>
+        <text x="576" y="138" fill="#b4b4ba">v2.s</text>
+        <text x="624" y="138" fill="#00d4aa">==</text>
+        <text x="650" y="138" fill="#b4b4ba">v3.s</text>
+      </g>
+
+      <rect x="576" y="158" width="336" height="32" rx="16" fill="#00d4aa" fill-opacity="0.10" stroke="#00d4aa" stroke-opacity="0.34" stroke-width="1"/>
+      <!-- checkmark: drawn, never a font glyph -->
+      <path d="M593 174L599 180L610 167" fill="none" stroke="#1de9c0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="622" y="178" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="11.5" fill="#1de9c0">byte-identical · fixed point</text>
+    </g>
+  </g>
+
+  <!-- ===== frame hairline ===== -->
+  <rect x="0.5" y="0.5" width="959" height="247" rx="19.5" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+</svg>

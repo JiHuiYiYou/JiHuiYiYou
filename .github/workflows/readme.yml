@@ -1,0 +1,39 @@
+name: GitHub-Profile-Summary-Cards
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - assets/**
+      - .github/workflows/readme.yml
+  schedule:
+    - cron: "21 23 * * *"   # 07:21 北京时间
+  workflow_dispatch:
+
+concurrency:
+  group: profile-summary-cards-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-cards
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@v7
+      - name: Generate summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: JiHuiYiYou
+          NAME: JiHuiYiYou
+          TIME_ZONE: Asia/Shanghai
+          BRANCH_NAME: main
+          AUTO_PUSH: true
+          EXCLUDE_REPOS: pldb
