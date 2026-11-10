@@ -99,11 +99,16 @@ SUB_PARTS = [
              "— one language, four projects, all in one place."),
 ]
 BUTTON = "Click Here"
+# 事实行只放**不会变的东西**。版本号、回归计数、发布状态（stable/beta）每发一次
+# 版就变一次，而这张卡是静态资产 —— profile 的 workflow 只重生成 summary cards，
+# 不碰它 ⇒ 把数字放进来等于每次发版都得回来改一次，忘了就是页面在撒谎。
+# 留下的都是长期成立的事实：语言名、后端怎么做的、目标架构、许可证。
 META = [
-    ("teal", "v4.1.5"),
-    ("text", "stable"),
+    ("teal", "JHYY"),
+    ("text", "no LLVM"),
+    ("text", "no GC"),
     ("text", "amd64"),
-    ("text", "281 / 301 PASS"),
+    ("text", "MIT"),
     ("link", "Changelog"),
     ("link", "Website"),
     ("link", "the whole family"),
