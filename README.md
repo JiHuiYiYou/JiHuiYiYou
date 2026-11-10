@@ -8,6 +8,10 @@
 </h1>
 
 <p align="center">
+  <img src="./assets/jhyy-calligraphy.png" height="46" alt="机会翼游">
+</p>
+
+<p align="center">
   <a href="https://jihuiyiyou.github.io/JiHuiYiYou-website/">
     <img src="./assets/cta-card.svg" alt="机会翼游 JHYY — A systems language that compiles itself. Click to visit the official site." width="100%">
   </a>
