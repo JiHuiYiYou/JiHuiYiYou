@@ -8,9 +8,31 @@
 </h1>
 
 <p align="center">
-  I'm <strong>JiHuiYiYou</strong> (机会翼游). <strong>JHYY</strong> is the language I designed —
-  a self-hosted, statically typed systems language whose compiler is written in itself.
+  I'm <strong>JiHuiYiYou</strong> (机会翼游), a student at RDFZ ICC.
+  <strong>JHYY</strong> is the language I designed — a self-hosted, statically typed
+  systems language whose compiler is written in itself.
 </p>
+
+---
+
+**Not only the language.** The rest of this account is robotics analysis for VEX —
+tools I build for our own team, 7262A ([VEX3D](https://github.com/JiHuiYiYou/VEX3D),
+[VEXAutoViz](https://github.com/JiHuiYiYou/VEXAutoViz),
+[VEXmcp](https://github.com/JiHuiYiYou/VEXmcp)) — games
+([AstralChessArena](https://github.com/JiHuiYiYou/AstralChessArena),
+[Chrome-Dino](https://github.com/JiHuiYiYou/Chrome-Dino),
+[first-game](https://github.com/JiHuiYiYou/first-game)), and tools I made for my
+own study workflow ([WORD](https://github.com/JiHuiYiYou/WORD),
+[msh-skill](https://github.com/JiHuiYiYou/msh-skill),
+[pike-skill](https://github.com/JiHuiYiYou/pike-skill),
+[MemoryJanitor](https://github.com/JiHuiYiYou/MemoryJanitor)) — several of them
+Claude Code skills. Also a vector calculator
+([VectorCalculator](https://github.com/JiHuiYiYou/VectorCalculator)), a
+voice-to-text desktop app ([WindowsASR](https://github.com/JiHuiYiYou/WindowsASR))
+and a snippet reporter ([DevSnippet](https://github.com/JiHuiYiYou/DevSnippet)).
+Small and personal; the language is just the loudest one.
+
+---
 
 <p align="center">
   <picture>
