@@ -34,6 +34,16 @@ Small and personal; the language is just the loudest one.
 
 ---
 
+**Not only me.** Robotics is a team sport, and the rest of this account was built
+next to classmates and teammates:
+
+- @billwang123123 — roommate, classmate, FRC teammate
+- @nyt-nyt2012 — VRC teammate, same school
+- @h0p3-cser — classmate
+- @LC658-code — classmate, VRC teammate
+
+---
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg">
