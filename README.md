@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
-    <img src="./assets/header-light.svg" alt="JiHuiYiYou — JHYY, a self-hosted systems language" width="800">
+    <img src="./assets/header-light.svg" alt="JiHuiYiYou — JHYY, a self-hosted systems language" width="100%">
   </picture>
 </p>
 
@@ -25,25 +25,25 @@
 <div align="center">
 <table>
   <tr>
-    <th width="200">01 / COMPILER</th>
-    <th width="200">02 / IDE</th>
-    <th width="200">03 / OS</th>
-    <th width="200">04 / VEX</th>
+    <th width="25%">01 / COMPILER</th>
+    <th width="25%">02 / IDE</th>
+    <th width="25%">03 / OS</th>
+    <th width="25%">04 / VEX</th>
   </tr>
   <tr>
-    <td align="center" width="200">
+    <td align="center" width="25%">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-compiler"><strong>JHYY Compiler</strong></a><br><br>
       <sub>A self-hosted systems language with a hand-written amd64 backend — no LLVM, no QBE, no GC.</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="25%">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-IDE"><strong>JHYY IDE</strong></a><br><br>
       <sub>Drag-block programming and full text editing over one shared AST, with Claude Code built in.</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="25%">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-OS"><strong>JiHuiYiYou-OS</strong></a><br><br>
       <sub>A co-designed microkernel OS — amd64, UEFI, capability-based, written in JHYY.</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="25%">
       <a href="https://github.com/JiHuiYiYou/JiHuiYiYou-for-VEX"><strong>JiHuiYiYou-for-VEX</strong></a><br><br>
       <sub>JHYY compiled to the VEX V5 Brain (ARM Cortex-A9) — signed binary format, softfp ABI, struct layouts.</sub>
     </td>
@@ -54,18 +54,18 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg">
-    <img src="./profile-summary-card-output/github/0-profile-details.svg" alt="GitHub profile overview and contributions over the past year" width="800">
+    <img src="./profile-summary-card-output/github/0-profile-details.svg" alt="GitHub profile overview and contributions over the past year" width="700">
   </picture>
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/2-most-commit-language.svg">
-    <img src="./profile-summary-card-output/github/2-most-commit-language.svg" alt="Most used languages by commit" width="398">
+    <img src="./profile-summary-card-output/github/2-most-commit-language.svg" alt="Most used languages by commit" width="340">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg">
-    <img src="./profile-summary-card-output/github/3-stats.svg" alt="GitHub stars, commits, pull requests, issues and contributions" width="398">
+    <img src="./profile-summary-card-output/github/3-stats.svg" alt="GitHub stars, commits, pull requests, issues and contributions" width="340">
   </picture>
 </p>
 
@@ -75,11 +75,11 @@
   <p align="center">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/1-repos-per-language.svg">
-      <img src="./profile-summary-card-output/github/1-repos-per-language.svg" alt="Most used languages by repository" width="398">
+      <img src="./profile-summary-card-output/github/1-repos-per-language.svg" alt="Most used languages by repository" width="340">
     </picture>
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/4-productive-time.svg">
-      <img src="./profile-summary-card-output/github/4-productive-time.svg" alt="Commit activity by hour, Asia/Shanghai" width="398" loading="lazy">
+      <img src="./profile-summary-card-output/github/4-productive-time.svg" alt="Commit activity by hour, Asia/Shanghai" width="340" loading="lazy">
     </picture>
   </p>
 </details>
