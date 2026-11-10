@@ -289,11 +289,14 @@ def build_button(sans: Font) -> str:
     frag, _ = draw(sans, BUTTON, BTN_FONT, label_x, BTN_Y + 37, "#050505")
     arrow = ('<path d="M7 17 L17 7 M9 7 L17 7 L17 15" fill="none" stroke="#050505" '
              'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
+    # 官网那个图标是 viewBox="0 0 24 24" width=14 —— 墨迹中心在 (12,12)，
+    # 所以要按 14/24 缩放后把 (12,12) 摆到圆心（拿 7 去凑会歪 5px）
+    k = 14 / 24
     return f"""    <rect x="{x0:.2f}" y="{BTN_Y}" width="{btn_w:.2f}" height="{BTN_H}" rx="{BTN_H / 2}" \
 fill="{BRAND_400}" stroke="{BRAND_500}" stroke-width="1"/>
     {frag}
     <circle cx="{icon_cx:.2f}" cy="{icon_cy:.2f}" r="{ICON / 2}" fill="rgba(5,5,5,0.18)"/>
-    <g transform="translate({icon_cx - 7:.2f} {icon_cy - 7:.2f})">{arrow}</g>"""
+    <g transform="translate({icon_cx - 12 * k:.2f} {icon_cy - 12 * k:.2f}) scale({k})">{arrow}</g>"""
 
 
 def build_meta(sans: Font) -> str:
@@ -338,13 +341,14 @@ def build_clone(mono: Font) -> str:
             '<path d="M5 15 H4 a2 2 0 0 1 -2 -2 V4 a2 2 0 0 1 2 -2 h9 a2 2 0 0 1 2 2 v1"/>')
     cx = x0 + box_w - 18 - ICON / 2
     cy = CLONE_Y + CLONE_H / 2
+    kc = 12 / 24  # 复制图标在官网是 viewBox="0 0 24 24" width=12，墨迹中心 ≈ (12, 11.5)
     return f"""    <rect x="{x0:.2f}" y="{CLONE_Y}" width="{box_w:.2f}" height="{CLONE_H}" \
 rx="{CLONE_H / 2}" fill="{BG_DEEP}" stroke="{HAIRLINE_2}" stroke-width="1.5"/>
     {prompt}
     {cmd}
     <circle cx="{cx:.2f}" cy="{cy:.2f}" r="{ICON / 2}" fill="{BG_ELEV_2}"/>
-    <g transform="translate({cx - 6:.2f} {cy - 6:.2f})" fill="none" stroke="{TEXT_3}" \
-stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">{icon}</g>"""
+    <g transform="translate({cx - 12 * kc:.2f} {cy - 11.5 * kc:.2f}) scale({kc})" fill="none" \
+stroke="{TEXT_3}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">{icon}</g>"""
 
 
 def embed_calligraphy(target_w: int) -> str:
